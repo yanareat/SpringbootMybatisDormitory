@@ -1,0 +1,30 @@
+server:
+  port: 8080
+  tomcat:
+      max-http-post-size: -1
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.94.45.18:3306/schoolhistory?useUnicode=true&serverTimezone=UTC&useSSL=false&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL
+    username: root
+    password: 123456
+    hikari:
+       mininum-idle: 8
+       maxinum-pool-size: 20
+
+    jackson:
+      date-format: yyyy-MM-dd hh:mm:ss
+      time-zone: GMT+8
+mybatis:
+  type-aliases-package: com.neuedu.pojo
+logging:
+  level:
+    com.neuedu.mapper: debug
+fdfs:
+  so-timeout: 1501
+  connect-timeout: 601
+  thumb-image:             #缩略图生成参数
+    width: 1960
+    height: 1200
+  tracker-list:            #TrackerList参数,支持多个
+    - 59.110.236.147:22122
